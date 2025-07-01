@@ -1,0 +1,9 @@
+eu\hindustries\timur\hwatchdog\managers\OPSessionManager.class
+eu\hindustries\timur\hwatchdog\listeners\CommandMonitorListener.class
+eu\hindustries\timur\hwatchdog\managers\FileLogger.class
+eu\hindustries\timur\hwatchdog\model\OPSession.class
+eu\hindustries\timur\hwatchdog\managers\ConfigManager.class
+eu\hindustries\timur\hwatchdog\HWatchdogPlugin.class
+eu\hindustries\timur\hwatchdog\managers\DiscordWebhookSender.class
+eu\hindustries\timur\hwatchdog\commands\ReasonCommand.class
+eu\hindustries\timur\hwatchdog\commands\ReportOPCommand.class

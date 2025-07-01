@@ -1,0 +1,22 @@
+name: H-Watchdog
+version: ${project.version}
+main: eu.hindustries.timur.hwatchdog.HWatchdogPlugin
+api-version: '1.21'
+author: Timur Hromek
+description: ${project.description}
+commands:
+  reason:
+    description: Set a reason for using OP commands.
+    usage: /reason <text...>
+    permission: hwatchdog.reason
+  reportop:
+    description: Anonymously report an operator for suspicious behavior.
+    usage: /reportop <player> <reason...>
+    permission: hwatchdog.report
+permissions:
+  hwatchdog.reason:
+    description: Allows using the /reason command.
+    default: op
+  hwatchdog.report:
+    description: Allows using the /reportop command.
+    default: true

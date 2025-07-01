@@ -1,0 +1,51 @@
+# H-Watchdog Configuration
+
+# List of commands to monitor. Include the slash.
+watched-commands:
+  - "/gamemode"
+  - "/give"
+  - "/kill"
+  - "/tp"
+  - "/ban"
+  - "/kick"
+  - "/op"
+  - "/deop"
+  - "/pardon"
+  - "/pardon-ip"
+  - "/ban-ip"
+  - "/whitelist"
+  - "/effect"
+
+discord:
+  enabled: true
+  # Webhook for public OP command alerts.
+  public-webhook-url: "YOUR_PUBLIC_DISCORD_WEBHOOK_URL_HERE"
+  # Webhook for private staff reports from /reportop.
+  report-webhook-url: "YOUR_PRIVATE_DISCORD_WEBHOOK_URL_HERE"
+  # Optional: Mention a role when a command is used. E.g., "<@&123456789012345678>"
+  mention-role-id: ""
+  # Use rich embeds for alerts. Looks much cleaner.
+  use-embeds: true
+
+auto-demote:
+  enabled: true
+  # Number of watched commands an OP can use within the cooldown period before being demoted.
+  threshold: 3
+  # The time window in seconds to track command usage.
+  cooldown-seconds: 60
+
+# List of operator usernames (case-insensitive) to exclude from public alerts and auto-demotion.
+# Their actions will still be logged to file.
+excluded-ops:
+  - ServerOwner
+  - Console
+
+# How long a reason set with /reason is valid, in seconds.
+reason-expiry-seconds: 120
+
+# Cooldown in seconds for players using /reportop to prevent spam.
+report-cooldown-seconds: 60
+
+# Whether to include coordinates in the file logs (not Discord alerts).
+# Discord alerts NEVER include coordinates for privacy.
+include-coordinates-in-logs: false
